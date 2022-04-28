@@ -1,7 +1,10 @@
 import numpy as np
 
 def double_pen(y, t, L1, L2, m1, m2):
-    """Return the first derivatives of y = theta1, z1, theta2, z2.
+    """
+    Using initial values for y0, return the first derivatives of
+    y = theta1, z1, theta2, z2.
+
     Parameters
     ----------
     y : :class:`numpy.ndarray`
@@ -13,6 +16,10 @@ def double_pen(y, t, L1, L2, m1, m2):
     L2 : :class:`int`
         Length of pendulum rod 2 (lower arm)
 
+    t : :class:`int`
+        Used by SciPy odeint, represents the individual times steps to use in
+        pendulum simulation 
+
     m1 : :class:`int`
         mass of pendulum rod 1 (upper arm)
 
@@ -21,9 +28,9 @@ def double_pen(y, t, L1, L2, m1, m2):
 
     Returns
     -------
-    theta1dot, z1dot, theta2dot, z2dot : :class:`numpy.ndarray`
-        2D array with dimensions (n, 4) containing the angles of the pendulums (theta1dot,theta2dot)
-        and z values (z1dot, z2dot)
+    theta1_out, z1_out, theta2_out, z2_out : :class:`numpy.ndarray`
+        2D array with dimensions (n, 4) containing the angles of the pendulums (theta1_out,theta2_out)
+        and z values (z1_out, z2_out)
     """
     g = 9.81
 
