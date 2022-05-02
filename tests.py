@@ -1,7 +1,6 @@
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 import double_pendulum as dp
 
